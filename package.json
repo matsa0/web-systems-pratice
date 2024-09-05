@@ -1,0 +1,29 @@
+{
+  "name": "pratice",
+  "version": "1.0.0",
+  "description": "Nodejs server",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon ./src/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/matsa0/web-systems-pratice.git"
+  },
+  "author": "Matheus S Azevedo <matheus.azevedo@aluno.ufop.edu.br>",
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/matsa0/web-systems-pratice/issues"
+  },
+  "homepage": "https://github.com/matsa0/web-systems-pratice#readme",
+  "dependencies": {
+    "@prisma/client": "^5.19.1",
+    "express": "^4.19.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.4",
+    "prisma": "^5.19.1"
+  }
+}
