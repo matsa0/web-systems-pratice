@@ -1,6 +1,6 @@
 import { Router } from "express";
-import { findAllController } from "../controller/states/findAllController.js";
-import { findByIdController } from "../controller/states/findByIdController.js";
+import { findAllController } from "../controller/states/findAllStateController.js";
+import { findByIdController } from "../controller/states/findByIdStateController.js";
 import { createStateController } from "../controller/states/createStateController.js";
 
 const stateRouter = Router()
