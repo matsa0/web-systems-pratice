@@ -20,7 +20,8 @@
   "homepage": "https://github.com/matsa0/web-systems-pratice#readme",
   "dependencies": {
     "@prisma/client": "^5.19.1",
-    "express": "^4.19.2"
+    "express": "^4.19.2",
+    "pratice": "file:"
   },
   "devDependencies": {
     "nodemon": "^3.1.4",
