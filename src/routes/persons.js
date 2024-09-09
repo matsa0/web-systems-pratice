@@ -1,9 +1,9 @@
 import { Router } from "express";
-import { findAllPersonController } from "../controller/persons/findAllPersonController.js";
-import { findByIdPersonController } from "../controller/persons/findByIdPersonController.js";
-import { createPersonController } from "../controller/persons/createPersonController.js";
-import { updatePersonController } from "../controller/persons/updatePersonController.js";
-import { deleteByIdPersonController } from "../controller/persons/deleteByIdPersonController.js";
+import { findAllPersonController } from "../controller/person/findAllPersonController.js";
+import { findByIdPersonController } from "../controller/person/findByIdPersonController.js";
+import { createPersonController } from "../controller/person/createPersonController.js";
+import { updatePersonController } from "../controller/person/updatePersonController.js";
+import { deleteByIdPersonController } from "../controller/person/deleteByIdPersonController.js";
 
 const personsRouter = Router()
 

@@ -1,13 +1,13 @@
 import { prisma } from "../../database/client.js";
 
-export class createPersonController {
+export class createLocalController {
     async handle(request, response) {
         const { name, street, number, complement, city_id } = request.body
 
         try {
             await prisma.city.findFirstOrThrow({
                 where: {
-                    id: parseInt(state_id)
+                    id: parseInt(city_id)
                 }
             }) 
         } catch (error) {

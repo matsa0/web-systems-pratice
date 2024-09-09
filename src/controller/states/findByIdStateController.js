@@ -7,6 +7,9 @@ export class findByIdController {
             const state = await prisma.state.findFirstOrThrow({
                 where: {
                     id: parseInt(id) //filtered as Integer(parse)
+                },
+                include: {
+                    cities: true
                 }
             });
 

@@ -10,7 +10,8 @@ export class findByIdCityController {
                     id: parseInt(id)
                 },
                 include: {
-                    state: true
+                    state: true,
+                    Local: true
                 }
             })
             return response.status(200).json(city)

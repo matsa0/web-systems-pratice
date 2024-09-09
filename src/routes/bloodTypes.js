@@ -19,4 +19,4 @@ bloodRouter.post('/bloods', create.handle)
 bloodRouter.put('/bloods', update.handle)
 bloodRouter.delete('/bloods/:id', deleteById.handle)
 
-export { personsRouter };
+export { bloodRouter };
