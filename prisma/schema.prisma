@@ -22,5 +22,56 @@ model City {
   state_id   Int
   state      State    @relation(fields: [state_id], references: [id])
   created_at DateTime @default(now())
-  updated_at DateTime @default(now())
+  updated_at DateTime @updatedAt
+  Person     Person[]
+  Local      Local[]
+}
+
+model Donation {
+  id         Int      @id @default(autoincrement())
+  person_id  Int
+  person     Person   @relation(fields: [person_id], references: [id])
+  local_id   Int
+  local      Local    @relation(fields: [local_id], references: [id])
+  date       DateTime @default(now())
+  created_at DateTime @default(now())
+  updated_at DateTime @updatedAt
+}
+
+model Person {
+  id               Int        @id @default(autoincrement())
+  name             String
+  house_street     String
+  house_number     String
+  house_complement String?
+  document_number  String
+  city_id          Int
+  city             City       @relation(fields: [city_id], references: [id])
+  blood_type_id    Int
+  blood_type       BloodType  @relation(fields: [blood_type_id], references: [id])
+  created_at       DateTime   @default(now())
+  updated_at       DateTime   @updatedAt
+  Donation         Donation[]
+}
+
+model BloodType {
+  id         Int      @id @default(autoincrement())
+  type       String
+  factor     String
+  created_at DateTime @default(now())
+  updated_at DateTime @updatedAt
+  Person     Person[]
+}
+
+model Local {
+  id         Int        @id @default(autoincrement())
+  name       String
+  street     String
+  number     String
+  complement String?
+  city_id    Int
+  city       City       @relation(fields: [city_id], references: [id])
+  created_at DateTime   @default(now())
+  updated_at DateTime   @updatedAt
+  Donation   Donation[]
 }
